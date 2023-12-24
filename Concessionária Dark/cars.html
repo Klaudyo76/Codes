@@ -1,0 +1,118 @@
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária DARK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: orangered;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1em;
+        }
+
+        .carro {
+            width: 300px;
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .formulario-compra {
+            display: none;
+            background-color: #fff;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Concessionária DARK</h1>
+    </header>
+
+    <section>
+        <div class="carro" id="carro1">
+            <img src="carro_1.jpg" alt="Carro 1">
+            <h2>Carro 1</h2>
+            <p>Preço: R$2.000.000,00</p>
+            <button onclick="mostrarFormulario('Carro 1', '2.000.000,00')">Comprar</button>
+        </div>
+
+        <div class="carro" id="carro2">
+            <img src="carro_2.jpg" alt="Carro 2">
+            <h2>Carro 2</h2>
+            <p>Preço: R$2.220.000,00</p>
+            <button onclick="mostrarFormulario('Carro 2', '2.220.000,00')">Comprar</button>
+        </div>
+
+        <!-- Adicione mais carros conforme necessário -->
+
+    </section>
+
+    <div class="formulario-compra" id="formularioCompra">
+        <h2>Formulário de Compra</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+        <button onclick="fecharFormulario()">Fechar</button>
+    </div>
+
+    <script>
+        function mostrarFormulario(carro, preco) {
+            document.getElementById('formularioCompra').style.display = 'block';
+            // Adicione lógica adicional aqui para personalizar o formulário com informações do carro, se necessário
+        }
+
+        function fecharFormulario() {
+            document.getElementById('formularioCompra').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+```
+
